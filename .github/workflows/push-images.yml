@@ -25,4 +25,4 @@ jobs:
         env:
           ON_PLUGINS: true
         run: |
-          REGISTRY="ghcr.io/$(echo ${{ github.repository }} | tr "A-Z" "a-z")" make push-images
+          REGISTRY="ghcr.io/$(echo ${{ github.repository_owner }}/clusterpedia | tr "A-Z" "a-z")" make push-images

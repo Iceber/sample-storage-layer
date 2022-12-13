@@ -2,7 +2,7 @@ STORAGE_PLUGIN ?= sample-storage-layer
 
 REGISTRY ?= "ghcr.io/clusterpedia-io/clusterpedia"
 CLUSTERPEDIA_BUILDER_IMAGE = "ghcr.io/clusterpedia-io/clusterpedia/builder"
-CLUSTERPEDIA_VERSIONS = v0.6.0-beta.1 2
+CLUSTERPEDIA_VERSIONS = v0.6.0-beta.1
 RELEASE_ARCHS ?= amd64 arm64
 
 BUILDER_IMAGE ?= ""
