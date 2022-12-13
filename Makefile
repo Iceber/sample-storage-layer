@@ -1,8 +1,8 @@
 STORAGE_PLUGIN ?= sample-storage-layer
 
-REGISTRY ?= "ghcr.io/iceber/clusterpedia"
+REGISTRY ?= "ghcr.io/clusterpedia-io/clusterpedia"
 CLUSTERPEDIA_BUILDER_IMAGE = "ghcr.io/clusterpedia-io/clusterpedia/builder"
-CLUSTERPEDIA_VERSIONS = v0.6.0-beta.1
+CLUSTERPEDIA_VERSIONS = v0.6.0-beta.1 2
 RELEASE_ARCHS ?= amd64 arm64
 
 BUILDER_IMAGE ?= ""
@@ -57,8 +57,7 @@ push-images: clean-manifests
 	done;
 
 clean-manifests:
-	set -e; \
 	for version in $(CLUSTERPEDIA_VERSIONS); do \
 		docker manifest rm $(REGISTRY)/$(STORAGE_PLUGIN):$(VERSION)-$$version 2>/dev/null; \
-	done;
+	done; exit 0
 	
